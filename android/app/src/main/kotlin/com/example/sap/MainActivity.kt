@@ -1,4 +1,4 @@
-package com.example.sap
+package com.sapmusic.app
 
 import io.flutter.embedding.android.FlutterActivity
 
