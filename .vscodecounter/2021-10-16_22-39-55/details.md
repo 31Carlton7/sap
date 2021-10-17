@@ -1,0 +1,130 @@
+# Details
+
+Date : 2021-10-16 22:39:55
+
+Directory /Users/carltonaikins/Desktop/Home/Programming/projects/sap
+
+Total : 115 files,  5539 codes, 138 comments, 701 blanks, all 6378 lines
+
+[summary](results.md)
+
+## Files
+| filename | language | code | comment | blank | total |
+| :--- | :--- | ---: | ---: | ---: | ---: |
+| [README.md](/README.md) | Markdown | 10 | 0 | 7 | 17 |
+| [android/app/build.gradle](/android/app/build.gradle) | Groovy | 49 | 3 | 11 | 63 |
+| [android/app/google-services.json](/android/app/google-services.json) | JSON | 46 | 0 | 0 | 46 |
+| [android/app/src/debug/AndroidManifest.xml](/android/app/src/debug/AndroidManifest.xml) | XML | 3 | 3 | 1 | 7 |
+| [android/app/src/main/AndroidManifest.xml](/android/app/src/main/AndroidManifest.xml) | XML | 13 | 11 | 1 | 25 |
+| [android/app/src/main/res/drawable-night-v21/launch_background.xml](/android/app/src/main/res/drawable-night-v21/launch_background.xml) | XML | 6 | 0 | 0 | 6 |
+| [android/app/src/main/res/drawable-night/launch_background.xml](/android/app/src/main/res/drawable-night/launch_background.xml) | XML | 6 | 0 | 0 | 6 |
+| [android/app/src/main/res/drawable-v21/launch_background.xml](/android/app/src/main/res/drawable-v21/launch_background.xml) | XML | 6 | 0 | 0 | 6 |
+| [android/app/src/main/res/drawable/launch_background.xml](/android/app/src/main/res/drawable/launch_background.xml) | XML | 6 | 0 | 0 | 6 |
+| [android/app/src/main/res/values-night/styles.xml](/android/app/src/main/res/values-night/styles.xml) | XML | 10 | 9 | 0 | 19 |
+| [android/app/src/main/res/values/styles.xml](/android/app/src/main/res/values/styles.xml) | XML | 10 | 9 | 0 | 19 |
+| [android/app/src/profile/AndroidManifest.xml](/android/app/src/profile/AndroidManifest.xml) | XML | 3 | 3 | 1 | 7 |
+| [android/build.gradle](/android/build.gradle) | Groovy | 26 | 0 | 5 | 31 |
+| [android/gradle.properties](/android/gradle.properties) | Properties | 3 | 0 | 1 | 4 |
+| [android/gradle/wrapper/gradle-wrapper.properties](/android/gradle/wrapper/gradle-wrapper.properties) | Properties | 5 | 1 | 1 | 7 |
+| [android/settings.gradle](/android/settings.gradle) | Groovy | 8 | 0 | 4 | 12 |
+| [flutter_launcher_icons.yaml](/flutter_launcher_icons.yaml) | YAML | 4 | 0 | 1 | 5 |
+| [flutter_native_splash.yaml](/flutter_native_splash.yaml) | YAML | 3 | 0 | 1 | 4 |
+| [ios/Flutter/AppFrameworkInfo.plist](/ios/Flutter/AppFrameworkInfo.plist) | XML | 26 | 0 | 1 | 27 |
+| [ios/Runner.xcodeproj/project.xcworkspace/xcshareddata/IDEWorkspaceChecks.plist](/ios/Runner.xcodeproj/project.xcworkspace/xcshareddata/IDEWorkspaceChecks.plist) | XML | 8 | 0 | 1 | 9 |
+| [ios/Runner.xcworkspace/xcshareddata/IDEWorkspaceChecks.plist](/ios/Runner.xcworkspace/xcshareddata/IDEWorkspaceChecks.plist) | XML | 8 | 0 | 1 | 9 |
+| [ios/Runner/AppDelegate.swift](/ios/Runner/AppDelegate.swift) | Swift | 12 | 0 | 2 | 14 |
+| [ios/Runner/Assets.xcassets/AppIcon.appiconset/Contents.json](/ios/Runner/Assets.xcassets/AppIcon.appiconset/Contents.json) | JSON | 122 | 0 | 1 | 123 |
+| [ios/Runner/Assets.xcassets/LaunchBackground.imageset/Contents.json](/ios/Runner/Assets.xcassets/LaunchBackground.imageset/Contents.json) | JSON | 52 | 0 | 1 | 53 |
+| [ios/Runner/Assets.xcassets/LaunchImage.imageset/Contents.json](/ios/Runner/Assets.xcassets/LaunchImage.imageset/Contents.json) | JSON | 23 | 0 | 1 | 24 |
+| [ios/Runner/Assets.xcassets/LaunchImage.imageset/README.md](/ios/Runner/Assets.xcassets/LaunchImage.imageset/README.md) | Markdown | 3 | 0 | 2 | 5 |
+| [ios/Runner/Base.lproj/LaunchScreen.storyboard](/ios/Runner/Base.lproj/LaunchScreen.storyboard) | XML | 43 | 1 | 0 | 44 |
+| [ios/Runner/Base.lproj/Main.storyboard](/ios/Runner/Base.lproj/Main.storyboard) | XML | 25 | 1 | 1 | 27 |
+| [ios/Runner/GoogleService-Info.plist](/ios/Runner/GoogleService-Info.plist) | XML | 34 | 0 | 0 | 34 |
+| [ios/Runner/Info.plist](/ios/Runner/Info.plist) | XML | 47 | 0 | 0 | 47 |
+| [ios/Runner/Runner-Bridging-Header.h](/ios/Runner/Runner-Bridging-Header.h) | C++ | 1 | 0 | 1 | 2 |
+| [lib/main.dart](/lib/main.dart) | Dart | 55 | 1 | 9 | 65 |
+| [lib/src/config/bottom_navigation_bar.dart](/lib/src/config/bottom_navigation_bar.dart) | Dart | 42 | 0 | 4 | 46 |
+| [lib/src/config/constants.dart](/lib/src/config/constants.dart) | Dart | 3 | 3 | 3 | 9 |
+| [lib/src/config/exceptions.dart](/lib/src/config/exceptions.dart) | Dart | 45 | 0 | 5 | 50 |
+| [lib/src/models/album.dart](/lib/src/models/album.dart) | Dart | 212 | 0 | 22 | 234 |
+| [lib/src/models/artist.dart](/lib/src/models/artist.dart) | Dart | 85 | 0 | 14 | 99 |
+| [lib/src/models/library.dart](/lib/src/models/library.dart) | Dart | 72 | 0 | 14 | 86 |
+| [lib/src/models/playlist.dart](/lib/src/models/playlist.dart) | Dart | 123 | 0 | 17 | 140 |
+| [lib/src/models/song.dart](/lib/src/models/song.dart) | Dart | 217 | 0 | 20 | 237 |
+| [lib/src/providers/artist_all_albums_future_provider.dart](/lib/src/providers/artist_all_albums_future_provider.dart) | Dart | 7 | 0 | 3 | 10 |
+| [lib/src/providers/artist_most_popular_songs_future_provider.dart](/lib/src/providers/artist_most_popular_songs_future_provider.dart) | Dart | 8 | 0 | 3 | 11 |
+| [lib/src/providers/audio_player_repository_provider.dart](/lib/src/providers/audio_player_repository_provider.dart) | Dart | 5 | 0 | 2 | 7 |
+| [lib/src/providers/duration_stream_provider.dart](/lib/src/providers/duration_stream_provider.dart) | Dart | 5 | 0 | 2 | 7 |
+| [lib/src/providers/mini_player_controller_state_provider.dart](/lib/src/providers/mini_player_controller_state_provider.dart) | Dart | 5 | 0 | 2 | 7 |
+| [lib/src/providers/music_repository_provider.dart](/lib/src/providers/music_repository_provider.dart) | Dart | 7 | 0 | 2 | 9 |
+| [lib/src/providers/music_service_provider.dart](/lib/src/providers/music_service_provider.dart) | Dart | 6 | 0 | 2 | 8 |
+| [lib/src/providers/top_albums_future_provider.dart](/lib/src/providers/top_albums_future_provider.dart) | Dart | 9 | 0 | 3 | 12 |
+| [lib/src/providers/top_playlists_future_provider.dart](/lib/src/providers/top_playlists_future_provider.dart) | Dart | 9 | 0 | 3 | 12 |
+| [lib/src/providers/top_songs_future_provider.dart](/lib/src/providers/top_songs_future_provider.dart) | Dart | 9 | 0 | 3 | 12 |
+| [lib/src/repositories/audio_player_repository.dart](/lib/src/repositories/audio_player_repository.dart) | Dart | 119 | 4 | 22 | 145 |
+| [lib/src/repositories/music_repository.dart](/lib/src/repositories/music_repository.dart) | Dart | 161 | 4 | 45 | 210 |
+| [lib/src/services/music_service.dart](/lib/src/services/music_service.dart) | Dart | 213 | 4 | 62 | 279 |
+| [lib/src/ui/components/album_card.dart](/lib/src/ui/components/album_card.dart) | Dart | 90 | 0 | 9 | 99 |
+| [lib/src/ui/components/album_info.dart](/lib/src/ui/components/album_info.dart) | Dart | 68 | 0 | 4 | 72 |
+| [lib/src/ui/components/album_song_card.dart](/lib/src/ui/components/album_song_card.dart) | Dart | 107 | 0 | 9 | 116 |
+| [lib/src/ui/components/artist_card.dart](/lib/src/ui/components/artist_card.dart) | Dart | 46 | 0 | 5 | 51 |
+| [lib/src/ui/components/error_body.dart](/lib/src/ui/components/error_body.dart) | Dart | 34 | 0 | 3 | 37 |
+| [lib/src/ui/components/playlist_card.dart](/lib/src/ui/components/playlist_card.dart) | Dart | 159 | 7 | 12 | 178 |
+| [lib/src/ui/components/playlist_song_card.dart](/lib/src/ui/components/playlist_song_card.dart) | Dart | 182 | 0 | 14 | 196 |
+| [lib/src/ui/components/show_album_options_bottom_sheet.dart](/lib/src/ui/components/show_album_options_bottom_sheet.dart) | Dart | 84 | 0 | 4 | 88 |
+| [lib/src/ui/components/show_playlist_options_bottom_sheet.dart](/lib/src/ui/components/show_playlist_options_bottom_sheet.dart) | Dart | 89 | 0 | 6 | 95 |
+| [lib/src/ui/components/show_song_options_bottom_sheet.dart](/lib/src/ui/components/show_song_options_bottom_sheet.dart) | Dart | 119 | 0 | 6 | 125 |
+| [lib/src/ui/components/song_card.dart](/lib/src/ui/components/song_card.dart) | Dart | 150 | 0 | 12 | 162 |
+| [lib/src/ui/components/top_album_card.dart](/lib/src/ui/components/top_album_card.dart) | Dart | 47 | 0 | 6 | 53 |
+| [lib/src/ui/components/top_playlist_card.dart](/lib/src/ui/components/top_playlist_card.dart) | Dart | 44 | 0 | 5 | 49 |
+| [lib/src/ui/components/unexpected_error.dart](/lib/src/ui/components/unexpected_error.dart) | Dart | 31 | 0 | 2 | 33 |
+| [lib/src/ui/mini_player/mini_player.dart](/lib/src/ui/mini_player/mini_player.dart) | Dart | 71 | 2 | 6 | 79 |
+| [lib/src/ui/mini_player/player_view.dart](/lib/src/ui/mini_player/player_view.dart) | Dart | 159 | 2 | 11 | 172 |
+| [lib/src/ui/views/album_view/album_view.dart](/lib/src/ui/views/album_view/album_view.dart) | Dart | 68 | 0 | 12 | 80 |
+| [lib/src/ui/views/album_view/components/album_view_header.dart](/lib/src/ui/views/album_view/components/album_view_header.dart) | Dart | 38 | 0 | 4 | 42 |
+| [lib/src/ui/views/artist_view/all_albums_and_singles_view.dart](/lib/src/ui/views/artist_view/all_albums_and_singles_view.dart) | Dart | 78 | 0 | 8 | 86 |
+| [lib/src/ui/views/artist_view/artist_view.dart](/lib/src/ui/views/artist_view/artist_view.dart) | Dart | 55 | 0 | 8 | 63 |
+| [lib/src/ui/views/artist_view/components/all_albums_and_singles_view_header.dart](/lib/src/ui/views/artist_view/components/all_albums_and_singles_view_header.dart) | Dart | 18 | 0 | 3 | 21 |
+| [lib/src/ui/views/artist_view/components/artist_categories_section.dart](/lib/src/ui/views/artist_view/components/artist_categories_section.dart) | Dart | 90 | 0 | 6 | 96 |
+| [lib/src/ui/views/artist_view/components/artist_info_card.dart](/lib/src/ui/views/artist_view/components/artist_info_card.dart) | Dart | 36 | 0 | 4 | 40 |
+| [lib/src/ui/views/artist_view/components/artist_view_header.dart](/lib/src/ui/views/artist_view/components/artist_view_header.dart) | Dart | 13 | 0 | 3 | 16 |
+| [lib/src/ui/views/artist_view/components/most_popular_songs_view_header.dart](/lib/src/ui/views/artist_view/components/most_popular_songs_view_header.dart) | Dart | 18 | 0 | 3 | 21 |
+| [lib/src/ui/views/artist_view/most_popular_songs_view.dart](/lib/src/ui/views/artist_view/most_popular_songs_view.dart) | Dart | 75 | 0 | 8 | 83 |
+| [lib/src/ui/views/browse_view/browse_view.dart](/lib/src/ui/views/browse_view/browse_view.dart) | Dart | 57 | 4 | 9 | 70 |
+| [lib/src/ui/views/browse_view/components/browse_view_header.dart](/lib/src/ui/views/browse_view/components/browse_view_header.dart) | Dart | 16 | 0 | 3 | 19 |
+| [lib/src/ui/views/browse_view/components/featured_playlists_list.dart](/lib/src/ui/views/browse_view/components/featured_playlists_list.dart) | Dart | 44 | 0 | 3 | 47 |
+| [lib/src/ui/views/browse_view/components/top_albums_list.dart](/lib/src/ui/views/browse_view/components/top_albums_list.dart) | Dart | 43 | 0 | 3 | 46 |
+| [lib/src/ui/views/browse_view/components/top_songs_list.dart](/lib/src/ui/views/browse_view/components/top_songs_list.dart) | Dart | 38 | 0 | 3 | 41 |
+| [lib/src/ui/views/current_view.dart](/lib/src/ui/views/current_view.dart) | Dart | 117 | 2 | 12 | 131 |
+| [lib/src/ui/views/library_views/all_albums_and_songs_view.dart](/lib/src/ui/views/library_views/all_albums_and_songs_view.dart) | Dart | 61 | 1 | 11 | 73 |
+| [lib/src/ui/views/library_views/components/all_albums_and_songs_view_header.dart](/lib/src/ui/views/library_views/components/all_albums_and_songs_view_header.dart) | Dart | 18 | 0 | 3 | 21 |
+| [lib/src/ui/views/library_views/components/library_album_card.dart](/lib/src/ui/views/library_views/components/library_album_card.dart) | Dart | 53 | 0 | 6 | 59 |
+| [lib/src/ui/views/library_views/components/library_album_view_header.dart](/lib/src/ui/views/library_views/components/library_album_view_header.dart) | Dart | 35 | 0 | 4 | 39 |
+| [lib/src/ui/views/library_views/components/library_albums_search_bar.dart](/lib/src/ui/views/library_views/components/library_albums_search_bar.dart) | Dart | 20 | 0 | 4 | 24 |
+| [lib/src/ui/views/library_views/components/library_view_categories_grid.dart](/lib/src/ui/views/library_views/components/library_view_categories_grid.dart) | Dart | 95 | 0 | 6 | 101 |
+| [lib/src/ui/views/library_views/components/library_view_header.dart](/lib/src/ui/views/library_views/components/library_view_header.dart) | Dart | 15 | 0 | 3 | 18 |
+| [lib/src/ui/views/library_views/components/liked_songs_info.dart](/lib/src/ui/views/library_views/components/liked_songs_info.dart) | Dart | 32 | 0 | 3 | 35 |
+| [lib/src/ui/views/library_views/components/liked_songs_view_header.dart](/lib/src/ui/views/library_views/components/liked_songs_view_header.dart) | Dart | 18 | 0 | 3 | 21 |
+| [lib/src/ui/views/library_views/library_album_view.dart](/lib/src/ui/views/library_views/library_album_view.dart) | Dart | 62 | 0 | 13 | 75 |
+| [lib/src/ui/views/library_views/library_view.dart](/lib/src/ui/views/library_views/library_view.dart) | Dart | 54 | 0 | 7 | 61 |
+| [lib/src/ui/views/library_views/liked_songs_view.dart](/lib/src/ui/views/library_views/liked_songs_view.dart) | Dart | 68 | 0 | 10 | 78 |
+| [lib/src/ui/views/playlist_view/components/playlist_info.dart](/lib/src/ui/views/playlist_view/components/playlist_info.dart) | Dart | 43 | 0 | 4 | 47 |
+| [lib/src/ui/views/playlist_view/components/playlist_view_header.dart](/lib/src/ui/views/playlist_view/components/playlist_view_header.dart) | Dart | 38 | 0 | 4 | 42 |
+| [lib/src/ui/views/playlist_view/playlist_view.dart](/lib/src/ui/views/playlist_view/playlist_view.dart) | Dart | 63 | 0 | 13 | 76 |
+| [lib/src/ui/views/search_views/components/albums_category_card.dart](/lib/src/ui/views/search_views/components/albums_category_card.dart) | Dart | 33 | 0 | 3 | 36 |
+| [lib/src/ui/views/search_views/components/albums_search_bar.dart](/lib/src/ui/views/search_views/components/albums_search_bar.dart) | Dart | 20 | 0 | 4 | 24 |
+| [lib/src/ui/views/search_views/components/artists_category_card.dart](/lib/src/ui/views/search_views/components/artists_category_card.dart) | Dart | 40 | 0 | 3 | 43 |
+| [lib/src/ui/views/search_views/components/artists_search_bar.dart](/lib/src/ui/views/search_views/components/artists_search_bar.dart) | Dart | 20 | 0 | 4 | 24 |
+| [lib/src/ui/views/search_views/components/search_albums_view_header.dart](/lib/src/ui/views/search_views/components/search_albums_view_header.dart) | Dart | 11 | 0 | 3 | 14 |
+| [lib/src/ui/views/search_views/components/search_artists_view_header.dart](/lib/src/ui/views/search_views/components/search_artists_view_header.dart) | Dart | 11 | 0 | 3 | 14 |
+| [lib/src/ui/views/search_views/components/search_songs_view_header.dart](/lib/src/ui/views/search_views/components/search_songs_view_header.dart) | Dart | 11 | 0 | 3 | 14 |
+| [lib/src/ui/views/search_views/components/songs_category_card.dart](/lib/src/ui/views/search_views/components/songs_category_card.dart) | Dart | 40 | 0 | 3 | 43 |
+| [lib/src/ui/views/search_views/components/songs_search_bar.dart](/lib/src/ui/views/search_views/components/songs_search_bar.dart) | Dart | 20 | 0 | 4 | 24 |
+| [lib/src/ui/views/search_views/search_albums_view.dart](/lib/src/ui/views/search_views/search_albums_view.dart) | Dart | 85 | 0 | 10 | 95 |
+| [lib/src/ui/views/search_views/search_artists_view.dart](/lib/src/ui/views/search_views/search_artists_view.dart) | Dart | 81 | 0 | 10 | 91 |
+| [lib/src/ui/views/search_views/search_songs_view.dart](/lib/src/ui/views/search_views/search_songs_view.dart) | Dart | 82 | 0 | 10 | 92 |
+| [lib/src/ui/views/search_views/search_view.dart](/lib/src/ui/views/search_views/search_view.dart) | Dart | 41 | 0 | 6 | 47 |
+| [pubspec.yaml](/pubspec.yaml) | YAML | 33 | 53 | 20 | 106 |
+| [test/widget_test.dart](/test/widget_test.dart) | Dart | 14 | 10 | 7 | 31 |
+
+[summary](results.md)
