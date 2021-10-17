@@ -29,8 +29,10 @@ class LibraryAlbumsSearchBar extends StatelessWidget {
     return SliverToBoxAdapter(
       child: CantonTextInput(
         hintText: 'Search in Albums',
-        isTextFormField: false,
+        isTextFormField: true,
         obscureText: false,
+        controller: controller,
+        onChanged: (query) => onChanged(query),
         prefixIcon: Icon(
           Iconsax.search_normal,
           color: Theme.of(context).colorScheme.secondaryVariant,
