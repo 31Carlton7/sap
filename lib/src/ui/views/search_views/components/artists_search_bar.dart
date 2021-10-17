@@ -32,8 +32,8 @@ class ArtistsSearchBar extends StatelessWidget {
       obscureText: false,
       controller: controller,
       onChanged: (query) => onChanged(query),
-      prefixIcon: IconlyIcon(
-        IconlyBold.Search,
+      prefixIcon: Icon(
+        Iconsax.search_normal,
         color: Theme.of(context).colorScheme.secondaryVariant,
       ),
     );
