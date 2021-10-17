@@ -1,0 +1,46 @@
+{
+  "project_info": {
+    "project_number": "491842717681",
+    "project_id": "sap-music",
+    "storage_bucket": "sap-music.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:491842717681:android:fa4a3dc527389c76292650",
+        "android_client_info": {
+          "package_name": "com.sapmusic.app"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "491842717681-kh2vlb5clcc5t469g0oophjbe5mk58go.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCiYwFEznHU75eB2uPf8QH0bsb8-xC8L7U"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "491842717681-kh2vlb5clcc5t469g0oophjbe5mk58go.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "491842717681-mh62q1sb5e1e3t21b36bj1tho25llka1.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.sapmusic.app"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
