@@ -31,7 +31,9 @@ import 'package:sap/src/ui/views/browse_view/browse_view.dart';
 import 'package:sap/src/ui/views/search_views/search_view.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 
-final _navigatorKey = GlobalKey<NavigatorState>();
+final _libraryNavigatorKey = GlobalKey<NavigatorState>();
+final _browseNavigatorKey = GlobalKey<NavigatorState>();
+final _searchNavigatorKey = GlobalKey<NavigatorState>();
 
 class CurrentView extends StatefulWidget {
   @override
@@ -59,6 +61,17 @@ class _CurrentViewState extends State<CurrentView> {
 
   void _onTabTapped(int index) {
     context.read(miniPlayerControllerStateProvider).state.animateToHeight(state: PanelState.MIN);
+
+    if (index == _currentIndex && _currentIndex == 0 && _libraryNavigatorKey.currentState!.canPop()) {
+      _libraryNavigatorKey.currentState!.pop();
+    }
+    if (index == _currentIndex && _currentIndex == 1 && _browseNavigatorKey.currentState!.canPop()) {
+      _browseNavigatorKey.currentState!.pop();
+    }
+    if (index == _currentIndex && _currentIndex == 2 && _searchNavigatorKey.currentState!.canPop()) {
+      _searchNavigatorKey.currentState!.pop();
+    }
+
     setState(() {
       _currentIndex = index;
     });
@@ -72,7 +85,7 @@ class _CurrentViewState extends State<CurrentView> {
 
         return MiniplayerWillPopScope(
           onWillPop: () async {
-            final navigator = _navigatorKey.currentState!;
+            final navigator = _libraryNavigatorKey.currentState!;
             if (!navigator.canPop()) return true;
 
             navigator.pop();
@@ -91,6 +104,7 @@ class _CurrentViewState extends State<CurrentView> {
                   index: _currentIndex,
                   children: [
                     Navigator(
+                      key: _libraryNavigatorKey,
                       observers: [FirebaseAnalyticsObserver(analytics: FirebaseAnalytics())],
                       onGenerateRoute: (settings) {
                         return MaterialPageRoute(
@@ -101,6 +115,7 @@ class _CurrentViewState extends State<CurrentView> {
                       },
                     ),
                     Navigator(
+                      key: _browseNavigatorKey,
                       observers: [FirebaseAnalyticsObserver(analytics: FirebaseAnalytics())],
                       onGenerateRoute: (settings) {
                         return MaterialPageRoute(
@@ -111,6 +126,7 @@ class _CurrentViewState extends State<CurrentView> {
                       },
                     ),
                     Navigator(
+                      key: _searchNavigatorKey,
                       observers: [FirebaseAnalyticsObserver(analytics: FirebaseAnalytics())],
                       onGenerateRoute: (settings) {
                         return MaterialPageRoute(
