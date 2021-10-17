@@ -51,7 +51,7 @@ Assuming Flutter is installed and setup on your device (If not, follow the steps
 flutter run
 ```
 
-If you would like a TestFlight version, please consult with me via this email: carltonaikins7@gmail.com, and I will add you to the test group. Google Play testing will be coming soon.
+If you would like a TestFlight version for the iOS app, please consult with me via this email: carltonaikins7@gmail.com, and I will add you to the test group. Google Play testing will be coming soon.
 
 ## Screenshots
 
