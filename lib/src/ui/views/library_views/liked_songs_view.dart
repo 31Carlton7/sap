@@ -43,7 +43,7 @@ class _LikedSongsViewState extends State<LikedSongsView> {
   }
 
   Widget _content(BuildContext context) {
-    var albums = context.read(musicRepositoryProvider).albums!;
+    var albums = context.read(musicRepositoryProvider);
     List<Song> likedSongs = [];
 
     for (var album in albums) {
