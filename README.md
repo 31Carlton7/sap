@@ -51,7 +51,96 @@ flutter run
 
 ## Screenshots
 
-Coming soon!
+
+<table> 
+  <th>Light Mode</th>
+  <tr>
+    <td> 
+      <img width="250" src="https://github.com/31Carlton7/sap/blob/master/screenshots/light_mode/screenshot_1.png"> </img>
+    </td>
+    <td>
+      <img width="250" src="https://github.com/31Carlton7/sap/blob/master/screenshots/light_mode/screenshot_2.png"> 
+  </img> 
+    </td>
+    <td> 
+        <img width="250" src="https://github.com/31Carlton7/sap/blob/master/screenshots/light_mode/screenshot_3.png"> 
+  </img>
+    </td>
+  </tr>
+  
+  <tr>
+     <td>
+       <img width="250" src="https://github.com/31Carlton7/sap/blob/master/screenshots/light_mode/screenshot_4.png"> 
+  </img>
+    </td>
+    <td>
+      <img width="250" src="https://github.com/31Carlton7/sap/blob/master/screenshots/light_mode/screenshot_5.png">
+    </td>
+    <td> 
+      <img width="250" src="https://github.com/31Carlton7/sap/blob/master/screenshots/light_mode/screenshot_6.png">
+    </td>
+  </tr>
+  
+   <tr>
+    <td> 
+      <img width="250" src="https://github.com/31Carlton7/sap/blob/master/screenshots/light_mode/screenshot_7.png"> </img>
+    </td>
+    <td>
+      <img width="250" src="https://github.com/31Carlton7/sap/blob/master/screenshots/light_mode/screenshot_8.png"> 
+  </img> 
+    </td>
+    <td> 
+        <img width="250" src="https://github.com/31Carlton7/sap/blob/master/screenshots/light_mode/screenshot_9.png"> 
+  </img>
+    </td>
+  </tr>
+  
+</table>
+
+<table> 
+  <th>Dark Mode</th>
+  <tr>
+    <td> 
+      <img width="250" src="https://github.com/31Carlton7/sap/blob/master/screenshots/dark_mode/screenshot_1.png"> </img>
+    </td>
+    <td>
+      <img width="250" src="https://github.com/31Carlton7/sap/blob/master/screenshots/dark_mode/screenshot_2.png"> 
+  </img> 
+    </td>
+    <td> 
+        <img width="250" src="https://github.com/31Carlton7/sap/blob/master/screenshots/dark_mode/screenshot_3.png"> 
+  </img>
+    </td>
+  </tr>
+  
+  <tr>
+     <td>
+       <img width="250" src="https://github.com/31Carlton7/sap/blob/master/screenshots/dark_mode/screenshot_4.png"> 
+  </img>
+    </td>
+    <td>
+      <img width="250" src="https://github.com/31Carlton7/sap/blob/master/screenshots/dark_mode/screenshot_5.png">
+    </td>
+    <td> 
+      <img width="250" src="https://github.com/31Carlton7/sap/blob/master/screenshots/dark_mode/screenshot_6.png">
+    </td>
+  </tr>
+  
+   <tr>
+    <td> 
+      <img width="250" src="https://github.com/31Carlton7/sap/blob/master/screenshots/dark_mode/screenshot_7.png"> </img>
+    </td>
+    <td>
+      <img width="250" src="https://github.com/31Carlton7/sap/blob/master/screenshots/dark_mode/screenshot_8.png"> 
+  </img> 
+    </td>
+    <td> 
+        <img width="250" src="https://github.com/31Carlton7/sap/blob/master/screenshots/dark_mode/screenshot_9.png"> 
+  </img>
+    </td>
+  </tr>
+  
+</table>
 
 ## Socials
 
