@@ -70,14 +70,13 @@ Future<void> showAlbumOptionsBottomSheet(BuildContext context, void Function(voi
                         color: Theme.of(context).primaryColor,
                       ),
                       onPressed: () {
-                        Navigator.pop(context);
-                        Navigator.pop(context);
                         setState(() {
                           _removeAlbumFromLibraryFunction(context, album);
                         });
                         if (setStateTwo != null) {
                           setStateTwo(() {});
                         }
+                        Navigator.pop(context);
                       },
                     ),
             ],
