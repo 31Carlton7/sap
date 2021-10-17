@@ -62,9 +62,10 @@ class ArtistCategoriesSection extends StatelessWidget {
                   style: Theme.of(context).textTheme.headline6,
                 ),
                 Spacer(),
-                IconlyIcon(
-                  IconlyBold.ArrowRight2,
-                  color: Theme.of(context).primaryColor,
+                Icon(
+                  Iconsax.arrow_right_2,
+                  color: Theme.of(context).colorScheme.secondaryVariant,
+                  size: 20,
                 ),
               ],
             ),
@@ -99,9 +100,10 @@ class ArtistCategoriesSection extends StatelessWidget {
                   style: Theme.of(context).textTheme.headline6,
                 ),
                 Spacer(),
-                IconlyIcon(
-                  IconlyBold.ArrowRight2,
-                  color: Theme.of(context).primaryColor,
+                Icon(
+                  Iconsax.arrow_right_2,
+                  color: Theme.of(context).colorScheme.secondaryVariant,
+                  size: 20,
                 ),
               ],
             ),
