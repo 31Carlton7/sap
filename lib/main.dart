@@ -65,18 +65,14 @@ class MyApp extends StatefulWidget {
 class _MyAppState extends State<MyApp> {
   @override
   Widget build(BuildContext context) {
-    return Consumer(
-      builder: (context, watch, child) {
-        return CantonApp(
-          title: kAppTitle,
-          primaryLightColor: CantonColors.yellow,
-          primaryDarkColor: CantonDarkColors.yellow,
-          primaryLightVariantColor: CantonColors.yellow[400]!,
-          primaryDarkVariantColor: CantonDarkColors.yellow[400]!,
-          navigatorObservers: [FirebaseAnalyticsObserver(analytics: FirebaseAnalytics())],
-          home: CurrentView(),
-        );
-      },
+    return CantonApp(
+      title: kAppTitle,
+      primaryLightColor: CantonColors.yellow,
+      primaryDarkColor: CantonDarkColors.yellow,
+      primaryLightVariantColor: CantonColors.yellow[400]!,
+      primaryDarkVariantColor: CantonDarkColors.yellow[400]!,
+      navigatorObservers: [FirebaseAnalyticsObserver(analytics: FirebaseAnalytics())],
+      home: CurrentView(),
     );
   }
 }
