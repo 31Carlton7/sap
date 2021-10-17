@@ -36,8 +36,18 @@ class AllAlbumsAndSongsView extends StatefulWidget {
 }
 
 class _AllAlbumsAndSongsViewState extends State<AllAlbumsAndSongsView> {
-  List<Album>? albums;
+  late List<Album>? albums;
+  List<Album>? sortedAlbums;
   var _searchController = TextEditingController();
+
+  @override
+  void initState() {
+    super.initState();
+
+    albums = context.read(musicRepositoryProvider);
+    sortedAlbums = albums;
+    sortedAlbums!.sort((a, b) => a.title!.compareTo(b.title!));
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -48,33 +58,40 @@ class _AllAlbumsAndSongsViewState extends State<AllAlbumsAndSongsView> {
   }
 
   Widget _content(BuildContext context) {
-    return CustomScrollView(
-      slivers: [
-        AllAlbumsAndSongsViewHeader(),
-        SliverToBoxAdapter(child: const SizedBox(height: 10)),
-        LibraryAlbumsSearchBar(_searchController, _searchAlbums),
-        SliverToBoxAdapter(child: const SizedBox(height: 15)),
-        _body(context),
-        SliverToBoxAdapter(child: const SizedBox(height: kExtraSpace)),
-      ],
+    return GestureDetector(
+      behavior: HitTestBehavior.opaque,
+      onPanDown: (_) {
+        FocusScope.of(context).requestFocus(FocusNode());
+      },
+      child: NotificationListener(
+        onNotification: (_) {
+          return false;
+        },
+        child: CustomScrollView(
+          slivers: [
+            AllAlbumsAndSongsViewHeader(),
+            SliverToBoxAdapter(child: const SizedBox(height: 10)),
+            LibraryAlbumsSearchBar(_searchController, _searchAlbums),
+            SliverToBoxAdapter(child: const SizedBox(height: 15)),
+            _body(context),
+            SliverToBoxAdapter(child: const SizedBox(height: kExtraSpace)),
+          ],
+        ),
+      ),
     );
   }
 
   Widget _body(BuildContext context) {
-    var albums = context.read(musicRepositoryProvider).albums!;
-
-    albums.sort((a, b) => a.title!.compareTo(b.title!));
-
     return SliverGrid(
       delegate: SliverChildBuilderDelegate(
         (context, index) {
           return LibraryAlbumCard(
-            albums[index],
+            sortedAlbums![index],
             setState: setState,
             setStateTwo: widget.setStateTwo,
           );
         },
-        childCount: albums.length,
+        childCount: sortedAlbums!.length,
       ),
       gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
         crossAxisCount: 2,
@@ -85,6 +102,16 @@ class _AllAlbumsAndSongsViewState extends State<AllAlbumsAndSongsView> {
   }
 
   void _searchAlbums(String query) {
-    // final newAlbumList =
+    var nQuery = query.toLowerCase();
+    var newAlbumList = context.read(musicRepositoryProvider).where((element) {
+      return (element.title!.toLowerCase().contains(nQuery) || element.artist!.name!.toLowerCase().contains(nQuery));
+    }).toList();
+
+    var newSortedAlbumsList = newAlbumList;
+    newSortedAlbumsList.sort((a, b) => b.title!.compareTo(a.title!));
+
+    setState(() {
+      sortedAlbums = newSortedAlbumsList;
+    });
   }
 }
