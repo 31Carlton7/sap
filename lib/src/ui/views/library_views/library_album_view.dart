@@ -48,12 +48,9 @@ class _LibraryAlbumViewState extends State<LibraryAlbumView> {
   }
 
   Widget _content(BuildContext context) {
-    var album = context.read(musicRepositoryProvider).albums!.where((element) => element.id == widget.id).toList()[0];
-    List<Song> song = album.tracks!.isEmpty
-        ? context.read(musicRepositoryProvider).songs!.where((element) => element.id == widget.id).toList()
-        : [Song()];
+    var album = context.read(musicRepositoryProvider).where((element) => element.id == widget.id).toList()[0];
 
-    var trackList = song[0].id == null ? album.tracks! : song;
+    var trackList = album.tracks ?? [];
     return Column(
       children: [
         LibraryAlbumViewHeader(
