@@ -59,20 +59,22 @@ class _LibraryViewState extends State<LibraryView> {
   }
 
   Widget _body(BuildContext context) {
-    var albums = context.read(musicRepositoryProvider).albums!;
+    return Consumer(builder: (context, watch, child) {
+      var albums = watch(musicRepositoryProvider);
 
-    return SliverGrid(
-      delegate: SliverChildBuilderDelegate(
-        (context, index) {
-          return LibraryAlbumCard(albums[index], setState: setState);
-        },
-        childCount: albums.length,
-      ),
-      gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
-        crossAxisCount: 2,
-        mainAxisExtent: 235,
-        crossAxisSpacing: 35,
-      ),
-    );
+      return SliverGrid(
+        delegate: SliverChildBuilderDelegate(
+          (context, index) {
+            return LibraryAlbumCard(albums[index], setState: setState);
+          },
+          childCount: albums.length,
+        ),
+        gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
+          crossAxisCount: 2,
+          mainAxisExtent: 235,
+          crossAxisSpacing: 35,
+        ),
+      );
+    });
   }
 }
