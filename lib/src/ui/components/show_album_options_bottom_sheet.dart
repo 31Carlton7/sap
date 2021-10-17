@@ -21,84 +21,96 @@ import 'package:sap/src/models/album.dart';
 import 'package:sap/src/providers/music_repository_provider.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 
-Future<void> showAlbumOptionsBottomSheet(BuildContext context, void Function(void Function()) setState, Album album,
-    {void Function(void Function())? setStateTwo}) {
+Future<void> showAlbumOptionsBottomSheet(
+  BuildContext context,
+  void Function(void Function()) setState,
+  Album album, {
+  void Function(void Function())? setStateTwo,
+}) {
   return showModalBottomSheet(
     context: context,
     isScrollControlled: true,
     elevation: 0,
     useRootNavigator: true,
     builder: (context) {
-      return Padding(
-        padding: EdgeInsets.symmetric(vertical: 15, horizontal: 27),
-        child: FractionallySizedBox(
-          heightFactor: 0.5,
-          child: Column(
-            crossAxisAlignment: CrossAxisAlignment.center,
-            mainAxisSize: MainAxisSize.min,
-            children: [
-              Container(
-                height: 5,
-                width: 50,
-                decoration: BoxDecoration(
-                  borderRadius: BorderRadius.circular(25),
-                  color: Theme.of(context).colorScheme.secondary,
+      var _isSaving = false;
+      return StatefulBuilder(builder: (context, nSetState) {
+        return Container(
+          padding: EdgeInsets.symmetric(vertical: 15, horizontal: 27),
+          child: FractionallySizedBox(
+            heightFactor: 0.5,
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.center,
+              mainAxisSize: MainAxisSize.min,
+              children: [
+                Container(
+                  height: 5,
+                  width: 50,
+                  decoration: BoxDecoration(
+                    borderRadius: BorderRadius.circular(25),
+                    color: Theme.of(context).colorScheme.secondary,
+                  ),
                 ),
-              ),
-              const SizedBox(height: 15),
-              !context.read(musicRepositoryProvider.notifier).albumIsAlreadyInLibrary(album)
-                  ? CantonPrimaryButton(
-                      buttonText: 'Add to library',
-                      textColor: Theme.of(context).colorScheme.primary,
-                      color: Theme.of(context).colorScheme.onSecondary,
-                      prefixIcon: Icon(
-                        FeatherIcons.plus,
-                        color: Theme.of(context).primaryColor,
+                const SizedBox(height: 15),
+                !context.read(musicRepositoryProvider.notifier).albumIsAlreadyInLibrary(album)
+                    ? CantonPrimaryButton(
+                        buttonText: 'Add to library',
+                        textColor: Theme.of(context).colorScheme.primary,
+                        color: Theme.of(context).colorScheme.onSecondary,
+                        prefixIcon: Icon(
+                          FeatherIcons.plus,
+                          color: Theme.of(context).primaryColor,
+                        ),
+                        onPressed: () async {
+                          final repo = context.read(musicRepositoryProvider.notifier);
+                          nSetState(() {
+                            _isSaving = true;
+                          });
+                          await repo.addAlbumToLibrary(album);
+                          _isSaving = false;
+                          setState(() {});
+                          Navigator.pop(context);
+                        },
+                      )
+                    : CantonPrimaryButton(
+                        buttonText: 'Remove from library',
+                        color: Theme.of(context).colorScheme.onSecondary,
+                        prefixIcon: Icon(
+                          FeatherIcons.minus,
+                          color: Theme.of(context).primaryColor,
+                        ),
+                        onPressed: () async {
+                          final repo = context.read(musicRepositoryProvider.notifier);
+                          nSetState(() {
+                            _isSaving = true;
+                          });
+                          await repo.removeAlbumFromLibrary(album);
+                          _isSaving = false;
+
+                          setState(() {});
+
+                          if (setStateTwo != null) {
+                            setStateTwo(() {});
+                          }
+
+                          Navigator.pop(context);
+                          Navigator.maybePop(context);
+                        },
                       ),
-                      onPressed: () {
-                        Navigator.pop(context);
-                        setState(() {
-                          _addAlbumToLibraryFunction(context, album);
-                        });
-                      },
-                    )
-                  : CantonPrimaryButton(
-                      buttonText: 'Remove from library',
-                      color: Theme.of(context).colorScheme.onSecondary,
-                      prefixIcon: Icon(
-                        FeatherIcons.minus,
-                        color: Theme.of(context).primaryColor,
-                      ),
-                      onPressed: () {
-                        setState(() {
-                          _removeAlbumFromLibraryFunction(context, album);
-                        });
-                        if (setStateTwo != null) {
-                          setStateTwo(() {});
-                        }
-                        Navigator.pop(context);
-                      },
-                    ),
-            ],
+                const SizedBox(height: 15),
+                _isSaving
+                    ? Text(
+                        'Saving...',
+                        style: Theme.of(context).textTheme.headline6?.copyWith(
+                              color: Theme.of(context).colorScheme.background,
+                            ),
+                      )
+                    : Container(),
+              ],
+            ),
           ),
-        ),
-      );
+        );
+      });
     },
   );
-}
-
-Future<void> _addAlbumToLibraryFunction(
-  BuildContext context,
-  Album album,
-) async {
-  final repo = context.read(musicRepositoryProvider.notifier);
-  repo.addAlbumToLibrary(album);
-}
-
-Future<void> _removeAlbumFromLibraryFunction(
-  BuildContext context,
-  Album album,
-) async {
-  final repo = context.read(musicRepositoryProvider.notifier);
-  repo.removeAlbumFromLibrary(album);
 }
