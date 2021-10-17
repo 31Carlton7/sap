@@ -36,107 +36,134 @@ Future<void> showSongOptionsBottomSheet(
     elevation: 0,
     useRootNavigator: true,
     builder: (context) {
-      return Padding(
-        padding: EdgeInsets.symmetric(vertical: 15, horizontal: 27),
-        child: FractionallySizedBox(
-          heightFactor: 0.5,
-          child: Column(
-            crossAxisAlignment: CrossAxisAlignment.center,
-            mainAxisSize: MainAxisSize.min,
-            children: [
-              Container(
-                height: 5,
-                width: 50,
-                decoration: BoxDecoration(
-                  borderRadius: BorderRadius.circular(25),
-                  color: Theme.of(context).colorScheme.secondary,
+      var _isSaving = false;
+      return StatefulBuilder(builder: (context, nSetState) {
+        return Padding(
+          padding: EdgeInsets.symmetric(vertical: 15, horizontal: 27),
+          child: FractionallySizedBox(
+            heightFactor: 0.5,
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.center,
+              mainAxisSize: MainAxisSize.min,
+              children: [
+                Container(
+                  height: 5,
+                  width: 50,
+                  decoration: BoxDecoration(
+                    borderRadius: BorderRadius.circular(25),
+                    color: Theme.of(context).colorScheme.secondary,
+                  ),
                 ),
-              ),
-              const SizedBox(height: 15),
-              !context.read(musicRepositoryProvider.notifier).songIsAlreadyInLibrary(song)
-                  ? CantonPrimaryButton(
-                      buttonText: 'Add to library',
-                      color: Theme.of(context).colorScheme.onSecondary,
-                      prefixIcon: Icon(
-                        FeatherIcons.plus,
-                        color: Theme.of(context).primaryColor,
+                const SizedBox(height: 15),
+                !context.read(musicRepositoryProvider.notifier).songIsAlreadyInLibrary(song)
+                    ? CantonPrimaryButton(
+                        buttonText: 'Add to library',
+                        color: Theme.of(context).colorScheme.onSecondary,
+                        prefixIcon: Icon(
+                          FeatherIcons.plus,
+                          color: Theme.of(context).primaryColor,
+                        ),
+                        onPressed: () async {
+                          final repo = context.read(musicRepositoryProvider.notifier);
+                          nSetState(() {
+                            _isSaving = true;
+                          });
+
+                          await repo.addSongToLibrary(song);
+
+                          _isSaving = false;
+
+                          setState(() {});
+
+                          Navigator.pop(context);
+                        },
+                      )
+                    : CantonPrimaryButton(
+                        buttonText: 'Remove from library',
+                        color: Theme.of(context).colorScheme.onSecondary,
+                        prefixIcon: Icon(
+                          FeatherIcons.minus,
+                          color: Theme.of(context).primaryColor,
+                        ),
+                        onPressed: () async {
+                          final repo = context.read(musicRepositoryProvider.notifier);
+                          nSetState(() {
+                            _isSaving = true;
+                          });
+
+                          await repo.removeSongFromLibrary(song);
+
+                          _isSaving = false;
+
+                          setState(() {});
+
+                          Navigator.pop(context);
+                        },
                       ),
-                      onPressed: () {
-                        Navigator.pop(context);
-                        setState(() {
-                          _addSongToLibraryFunction(context, song);
-                        });
-                      },
-                    )
-                  : CantonPrimaryButton(
-                      buttonText: 'Remove from library',
-                      color: Theme.of(context).colorScheme.onSecondary,
-                      prefixIcon: Icon(
-                        FeatherIcons.minus,
-                        color: Theme.of(context).primaryColor,
+                const SizedBox(height: 15),
+                !context.read(musicRepositoryProvider.notifier).songIsAlreadyLiked(song)
+                    ? CantonPrimaryButton(
+                        buttonText: 'Add to Liked Songs',
+                        color: Theme.of(context).colorScheme.onSecondary,
+                        prefixIcon: Icon(
+                          CupertinoIcons.heart_fill,
+                          color: Theme.of(context).primaryColor,
+                        ),
+                        onPressed: () async {
+                          final repo = context.read(musicRepositoryProvider.notifier);
+
+                          nSetState(() {
+                            _isSaving = true;
+                          });
+
+                          await repo.addSongToLikedSongs(song);
+
+                          setState(() {});
+                          _isSaving = false;
+
+                          Navigator.pop(context);
+                        },
+                      )
+                    : CantonPrimaryButton(
+                        buttonText: 'Remove song from Liked Songs',
+                        color: Theme.of(context).colorScheme.onSecondary,
+                        prefixIcon: Icon(
+                          CupertinoIcons.heart_slash_fill,
+                          color: Theme.of(context).primaryColor,
+                        ),
+                        onPressed: () async {
+                          final repo = context.read(musicRepositoryProvider.notifier);
+                          await repo.removeSongFromLikedSongs(song);
+
+                          nSetState(() {
+                            _isSaving = true;
+                          });
+
+                          _isSaving = false;
+
+                          setState(() {});
+
+                          Navigator.pop(context);
+                        },
                       ),
-                      onPressed: () {
-                        Navigator.pop(context);
-                        Navigator.pop(context);
-                        setState(() {
-                          _removeSongFromLibraryFunction(context, song);
-                        });
-                      },
-                    ),
-              const SizedBox(height: 15),
-              !context.read(musicRepositoryProvider.notifier).songIsAlreadyLiked(song)
-                  ? CantonPrimaryButton(
-                      buttonText: 'Add to Liked Songs',
-                      color: Theme.of(context).colorScheme.onSecondary,
-                      prefixIcon: Icon(
-                        CupertinoIcons.heart_fill,
-                        color: Theme.of(context).primaryColor,
-                      ),
-                      onPressed: () {
-                        Navigator.pop(context);
-                        setState(() {
-                          _addSongToLikedSongsFunction(context, song);
-                        });
-                      },
-                    )
-                  : CantonPrimaryButton(
-                      buttonText: 'Remove song from Liked Songs',
-                      color: Theme.of(context).colorScheme.onSecondary,
-                      prefixIcon: Icon(
-                        CupertinoIcons.heart_slash_fill,
-                        color: Theme.of(context).primaryColor,
-                      ),
-                      onPressed: () {
-                        Navigator.pop(context);
-                        setState(() {
-                          _removeSongFromLikedSongsFunction(context, song);
-                        });
-                      },
-                    ),
-            ],
+                const SizedBox(height: 15),
+                _isSaving
+                    ? Text(
+                        'Saving...',
+                        style: Theme.of(context).textTheme.headline6?.copyWith(
+                              color: Theme.of(context).colorScheme.background,
+                            ),
+                      )
+                    : Container(),
+              ],
+            ),
           ),
-        ),
-      );
+        );
+      });
     },
   );
 }
 
-Future<void> _addSongToLibraryFunction(BuildContext context, Song song) async {
-  final repo = context.read(musicRepositoryProvider.notifier);
-  repo.addSongToLibrary(song);
-}
+Future<void> _addSongToLibraryFunction(BuildContext context, Song song) async {}
 
-Future<void> _removeSongFromLibraryFunction(BuildContext context, Song song) async {
-  final repo = context.read(musicRepositoryProvider.notifier);
-  repo.removeSongFromLibrary(song);
-}
-
-Future<void> _addSongToLikedSongsFunction(BuildContext context, Song song) async {
-  final repo = context.read(musicRepositoryProvider.notifier);
-  repo.addSongToLikedSongs(song);
-}
-
-Future<void> _removeSongFromLikedSongsFunction(BuildContext context, Song song) async {
-  final repo = context.read(musicRepositoryProvider.notifier);
-  repo.removeSongFromLikedSongs(song);
-}
+Future<void> _removeSongFromLibraryFunction(BuildContext context, Song song) async {}
