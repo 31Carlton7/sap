@@ -22,7 +22,7 @@ import 'package:sap/src/config/constants.dart';
 import 'package:sap/src/models/song.dart';
 import 'package:sap/src/providers/music_repository_provider.dart';
 import 'package:sap/src/ui/components/song_card.dart';
-import 'package:sap/src/ui/views/library_views/components/liked_songs_info.dart';
+import 'package:sap/src/ui/views/library_views/components/liked_songs_info_card.dart';
 import 'package:sap/src/ui/views/library_views/components/liked_songs_view_header.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 
