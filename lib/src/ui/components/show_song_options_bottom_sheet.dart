@@ -163,7 +163,3 @@ Future<void> showSongOptionsBottomSheet(
     },
   );
 }
-
-Future<void> _addSongToLibraryFunction(BuildContext context, Song song) async {}
-
-Future<void> _removeSongFromLibraryFunction(BuildContext context, Song song) async {}
