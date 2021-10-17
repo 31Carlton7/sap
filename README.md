@@ -51,7 +51,7 @@ Assuming Flutter is installed and setup on your device (If not, follow the steps
 flutter run
 ```
 
-If you would like a TestFlight version for the iOS app, please consult with me via this email: carltonaikins7@gmail.com, and I will add you to the test group. Google Play testing will be coming soon.
+If you would like a TestFlight version for the iOS app, please consult with me via this email: carltonaikins7@gmail.com, and I will add you to the test group. Google Play testing will be coming soon. You can also download the IPA & APK files from [here](https://github.com/31Carlton7/sap/blob/master/release) and inject it into your phone yourself.
 
 ## Screenshots
 
