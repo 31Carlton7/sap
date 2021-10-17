@@ -33,7 +33,7 @@ Special thanks to my sister, she gave me the idea to name the app "Sap".
 ## Features
 
 - _Mini Player_: A persistent mini player to play music. Has a full-screen version with slider and seek controls.
-- _Download Music_: Save all music locally to the device, and play it whenever you want.
+- _Save Music_: Save all music locally to the device. (REQUIRES INTERNET CONNECTION TO PLAY).
 - _Search_: Search for Albums, Artists & Songs from Deezer's catalog.
 - _Artist Stats_: Get artist stats and most popular songs.
 - _Top Albums_: See what's new with the top albums feature in the browse screen.
