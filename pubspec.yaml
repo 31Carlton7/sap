@@ -52,6 +52,10 @@ dependencies:
   just_audio: ^0.9.12
   miniplayer: ^1.0.1
 
+  # Config
+  flutter_launcher_icons: ^0.9.2
+  flutter_native_splash: ^1.2.4
+
   # Other
   intl: ^0.17.0
 
