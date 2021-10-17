@@ -17,10 +17,9 @@ along with this program.  If not, see <https://www.gnu.org/licenses/>.
 */
 
 import 'package:flutter_riverpod/flutter_riverpod.dart';
-import 'package:sap/src/models/library.dart';
+import 'package:sap/src/models/album.dart';
 import 'package:sap/src/repositories/music_repository.dart';
 
-final musicRepositoryProvider =
-    StateNotifierProvider<MusicRepository, Library>((ref) {
+final musicRepositoryProvider = StateNotifierProvider<MusicRepository, List<Album>>((ref) {
   return MusicRepository();
 });
