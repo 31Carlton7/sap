@@ -88,7 +88,7 @@ class MusicRepository extends StateNotifier<Library> {
   Future<void> removeAlbumFromLibrary(Album album) async {
     state.albums = [
       for (final nAlbum in state.albums!)
-        if (album != nAlbum) nAlbum,
+        if (album.id != nAlbum.id) nAlbum,
     ];
     _saveData();
   }
