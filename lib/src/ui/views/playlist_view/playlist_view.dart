@@ -62,7 +62,7 @@ class _PlaylistViewState extends State<PlaylistView> {
 
             return Column(
               children: [
-                PlaylistViewHeader(playlist.data!, tracks.data, setState),
+                PlaylistViewHeader(),
                 Expanded(
                   child: ListView(
                     children: _body(context, playlist, tracks),
