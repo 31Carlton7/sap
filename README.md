@@ -2,6 +2,8 @@
 
 # Sap
 
+<img src="https://img.shields.io/github/stars/31Carlton7/sap"> </img> <img src="https://visitor-badge.glitch.me/badge?page_id=31Carlton7.sap"> </img>
+
 Sap is a music streaming & discovery app built with the [Deezer API](https://developers.deezer.com/) for iOS and Android. It includes a mini player, search and local storage. Be sure to leave a star 🌟.
 
 [License](https://github.com/31Carlton7/sap/blob/master/LICENSE)
@@ -51,7 +53,7 @@ Assuming Flutter is installed and setup on your device (If not, follow the steps
 flutter run
 ```
 
-If you would like a TestFlight version for the iOS app, please consult with me via this email: carltonaikins7@gmail.com, and I will add you to the test group. Google Play testing will be coming soon.
+If you would like a TestFlight version for the iOS app, please consult with me via this email: carltonaikins7@gmail.com, and I will add you to the test group. Google Play testing will be coming soon. You can also download the IPA & APK files from [here](https://github.com/31Carlton7/sap/blob/master/release) and inject it into your phone yourself.
 
 ## Screenshots
 
@@ -152,3 +154,5 @@ If you have any questions, you can reach me here:
 
 - Instagram: [@31carlton7](https://www.instagram.com/31carlton7/)
 - Email: carltonaikins7@gmail.com
+
+In God we trust🙏🏾
