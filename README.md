@@ -12,6 +12,8 @@ Sap is a music streaming & discovery app built with the [Deezer API](https://dev
 
 [Video](https://github.com/31Carlton7/sap/blob/master/videos/video.mp4)
 
+[IPA & APK Downloads](https://github.com/31Carlton7/sap/blob/master/release)
+
 ## Developer Info
 
 The API for getting the music and other information are courtesy of [Deezer](https://developers.deezer.com/).
